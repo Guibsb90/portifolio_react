@@ -6,5 +6,8 @@ export const P = styled.h3<Props>`
   font-weight: normal;
   font-size: ${(props) => (props.fontSize ? props.fontSize + 'px' : '14px')};
   line-height: 22px;
-  color: ${(props) => (props.tipo === 'principal' ? '#282a35' : '#949494')};
+  color: ${(props) =>
+    props.tipo === 'principal'
+      ? props.theme.corPrincipal
+      : props.theme.corSecundaria};
 `
